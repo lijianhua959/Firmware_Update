@@ -1,7 +1,7 @@
 ﻿
 aux_source_directory(. CORE_SRC)
 
-project(libMasterUpdate)
+project(firmware_update)
 
 add_library(${PROJECT_NAME} STATIC ${CORE_SRC})
 

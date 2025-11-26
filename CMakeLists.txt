@@ -15,9 +15,9 @@ if(UNIX)
     add_compile_options(-fPIC)
 
     # 设置 OpenSSL 路径
-    # set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/linux)
+    set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/linux)
     # set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/arm7.5)
-    set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/arm11.2)
+    # set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/arm11.2)
 
 endif()
 
@@ -34,4 +34,4 @@ add_subdirectory(core)
 # 添加主程序
 add_executable(MAINEXE main.cpp)
 
-target_link_libraries(MAINEXE libMasterUpdate)
+target_link_libraries(MAINEXE firmware_update)
