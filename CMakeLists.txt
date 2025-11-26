@@ -11,6 +11,16 @@ project(MAINEXE)
 # 调试信息
 # add_compile_definitions(BUILD_TYPE)
 
+if(UNIX)
+    add_compile_options(-fPIC)
+
+    # 设置 OpenSSL 路径
+    # set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/linux)
+    # set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/arm7.5)
+    set(OPENSSL_ROOT_DIR /home/ljh/third_party_libs/openssl/arm11.2)
+
+endif()
+
 
 # 添加第三方库 libssh2
 include_directories(3rdparty/libssh2/include)
